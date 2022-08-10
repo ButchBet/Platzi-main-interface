@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --lg: 18px;
+    --md: 16px;
+    --sm: 14px;
+    --new-grey: rgb(87, 87, 87);
+}
+
+head {
+    font-size: 62.5%; /*1 rem = 10px*/
+}
+
+.container {
+    overflow: hidden;
+}
+
+.container header,
+.container main {
+    width: 100%;
+    min-width: 150px;
+    height: auto;
+}
+
+.container,
+.container header,
+.container header .logo,
+.container header ul,
+.container main,
+.container main .progress .schools,
+.container footer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container main .descriptions,
+.container main .progress {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+.container header {
+    padding: 10px;
+    border-bottom: 2px solid green;
+}
+
+.container header .logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+}
+
+.container header .logo figure:first-child {
+    width: 40px;
+    cursor: pointer;
+}
+
+.container header .logo figure:last-child {
+    width: 53px;
+    cursor: pointer;
+}
+
+.container header .logo figure img {
+    width: 100%;
+}
+
+.container header .logo figure:last-child img {
+    filter: brightness(0) invert(0.5);
+}
+
+.container header ul {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.container header ul li a {
+    text-decoration: none;
+    color: var(--new-grey);
+    font-size: var(--sm);
+}
+
+.container main {
+    justify-content: center;
+    border-bottom: 2px solid yellow;
+}
+
+.container main .descriptions {
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid greenyellow;
+}
+
+.container main .descriptions img,
+.container main .descriptions p {
+    width: 95%;
+}
+
+.container main .descriptions p {
+    color: var(--new-grey);
+    text-align: justify;
+    font-size: var(--sm)
+}
+
+.container main .progress {
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.container main .progress p {
+    font-size: var(--sm);
+    color: var(--new-gery);
+    font-weight: bold;
+}
+
+.container main .progress .schools {
+    justify-content: space-evenly;
+    gap: 20px;
+    overflow-y: scroll;
+}
+
+.container main .progress .schools img {
+    cursor: pointer;
+    width: 80%;
+}
+
+.container footer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--new-grey);
+    font-size: var(--sm);
+    height: 40px;
+}
+
+@media (min-width: 320px) {
+    .container main .progress .schools img {
+        width: 290px;
+    }
+}

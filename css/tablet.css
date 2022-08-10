@@ -1,0 +1,12 @@
+.container header {
+    justify-content: space-between;
+}
+
+.container header .logo,
+.container header ul {
+    width: auto;
+}
+
+.container header ul {
+    padding: 0 10px;
+}
